@@ -1,0 +1,183 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: #fff;
+}
+header {
+  background: #000;
+  padding: 10px 20px;
+  border-bottom: 2px solid #222;
+}
+header h1 {
+  color: #fff;
+  font-size: 20px;
+}
+header h1 span {
+  color: red;
+}
+
+/* Layout */
+.container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Player */
+.player-container {
+  flex: 2;
+  background: #000;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.player-container video {
+  width: 100%;
+  max-width: 1090px;
+  aspect-ratio: 16/9;
+  background: #000;
+  border-radius: 20px;
+  object-fit: contain; /* Portrait/landscape auto fit */
+}
+.player-container h3 {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #ddd;
+}
+
+/* Playlist */
+.playlist {
+  flex: 1;
+  overflow-y: auto;
+  max-height: 500px;
+}
+.playlist ul {
+  list-style: none;
+}
+.playlist li {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #1a1a1a;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.playlist li:hover {
+  background: #333;
+}
+.playlist li.active {
+  background: #0044cc;
+}
+.playlist img {
+  width: 100px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.playlist span {
+  font-size: 14px;
+  color: #ddd;
+}
+
+/* Related Section */
+.related {
+  padding: 20px;
+}
+.related h2 {
+  margin-bottom: 15px;
+}
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+}
+.related-item {
+  background: #1a1a1a;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.related-item:hover {
+  transform: scale(1.05);
+}
+.related-item img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+.related-item span {
+  display: block;
+  padding: 8px;
+  font-size: 14px;
+  color: #ddd;
+}
+
+/* Pagination */
+.pagination {
+  margin-top: 15px;
+  text-align: center;
+}
+.pagination button {
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.pagination button:hover {
+  background: #555;
+}
+
+/* Banner Ads */
+.ad-container {
+  margin-top: 15px;
+  text-align: center;
+}
+
+/* Floating Video Slider */
+.ad-slider {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+/* Banner Ads */
+.ad-container {
+  margin: 20px 0;
+  text-align: center;
+}
+.pagination {
+  margin-top: 15px;
+  text-align: center;
+}
+.pagination button {
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  margin: 0 3px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.pagination button:hover {
+  background: #555;
+}
+.pagination button:disabled {
+  background: #222;
+  cursor: not-allowed;
+}
