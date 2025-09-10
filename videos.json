@@ -1,12 +1,10 @@
 [
   {
-    "title": "Big Buck Bunny",
-    "file": "videos/big_buck_bunny_720p_1mb.mp4",
-    "thumbnail": "videos/big_buck_bunny_720p_1mb.jpg"
+    "title": "Video 1",
+    "file": "videos/video1.mp4"
   },
   {
-    "title": "Sample Video 2",
-    "file": "videos/sample_video_2.mp4",
-    "thumbnail": "videos/sample_video_2.jpg"
+    "title": "Video 2",
+    "file": "videos/video2.mp4"
   }
 ]
