@@ -11,6 +11,7 @@ fetch('videos.json')
       li.textContent = video.title;
       li.addEventListener('click', () => {
         videoSource.src = video.file;
+        mainVideo.poster = video.thumbnail || "";
         mainVideo.load();
         mainVideo.play().catch(() => {});
         videoTitle.textContent = video.title;
@@ -18,8 +19,10 @@ fetch('videos.json')
       playlistEl.appendChild(li);
     });
 
+    // Load video pertama otomatis
     if(videos.length > 0){
       videoSource.src = videos[0].file;
+      mainVideo.poster = videos[0].thumbnail || "";
       mainVideo.load();
       videoTitle.textContent = videos[0].title;
     }

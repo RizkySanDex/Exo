@@ -1,3 +1,12 @@
 [
-  { "src": "video/Cewek Jilbab Dicolmekin di Mobil - Kingbokep.mp4", "title": "Cewek Jilbab Dicolmekin di Mobil" }
+  {
+    "title": "Big Buck Bunny",
+    "file": "videos/big_buck_bunny_720p_1mb.mp4",
+    "thumbnail": "videos/big_buck_bunny_720p_1mb.jpg"
+  },
+  {
+    "title": "Sample Video 2",
+    "file": "videos/sample_video_2.mp4",
+    "thumbnail": "videos/sample_video_2.jpg"
+  }
 ]
