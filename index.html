@@ -16,22 +16,20 @@
   </header>
 
   <main class="container">
-    <!-- Video Player -->
     <div class="player-container">
-      <video id="mainVideo" controls>
+      <video id="mainVideo" controls muted autoplay>
         <source src="" type="video/mp4">
       </video>
       <h3 id="videoTitle"></h3>
 
       <!-- Banner Ads bawah player -->
       <div class="ad-container">
-        <script async type="application/javascript" src="https://a.magsrv.com/ad-provider.js"></script>
+        <script async src="https://a.magsrv.com/ad-provider.js"></script>
         <ins class="eas6a97888e17" data-zoneid="5720038"></ins>
         <script>(AdProvider = window.AdProvider || []).push({"serve": {}});</script>
       </div>
     </div>
 
-    <!-- Playlist -->
     <aside class="playlist">
       <ul id="playlist"></ul>
     </aside>
@@ -39,12 +37,11 @@
 
   <!-- Banner Ads atas "Video Lainnya" -->
   <div class="ad-container">
-    <script async type="application/javascript" src="https://a.magsrv.com/ad-provider.js"></script>
+    <script async src="https://a.magsrv.com/ad-provider.js"></script>
     <ins class="eas6a97888e17" data-zoneid="5720038"></ins>
     <script>(AdProvider = window.AdProvider || []).push({"serve": {}});</script>
   </div>
 
-  <!-- Related Videos -->
   <section class="related">
     <h2>Video Lainnya</h2>
     <div id="relatedVideos" class="related-grid"></div>
@@ -57,12 +54,27 @@
 
   <!-- Video Slider Ads -->
   <div class="ad-slider">
-    <script async type="application/javascript" src="https://a.magsrv.com/ad-provider.js"></script>
+    <script async src="https://a.magsrv.com/ad-provider.js"></script>
     <ins class="eas6a97888e31" data-zoneid="5720040"></ins>
     <script>(AdProvider = window.AdProvider || []).push({"serve": {}});</script>
   </div>
 
-  <!-- Script utama -->
+  <!-- Fluid Player with In-Stream Ads -->
+  <script>
+    const myPlayer = fluidPlayer('mainVideo', {
+      layoutControls: { playButtonShowing: true },
+      vastOptions: {
+        adList: [{
+          roll: 'preRoll',
+          vastTag: 'https://s.magsrv.com/v1/vast.php?idzone=5720036'
+        }],
+        adCancelTimeout: 5000,
+        adsEnabled: true
+      }
+    });
+  </script>
+
+  <!-- Playlist & Video Switcher -->
   <script src="script.js"></script>
 </body>
 </html>
