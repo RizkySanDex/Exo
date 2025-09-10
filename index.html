@@ -11,6 +11,7 @@
   <script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
 </head>
 <body>
+
   <header>
     <h1><span>▶</span> VIO VIDEOS</h1>
   </header>
@@ -31,6 +32,7 @@
     </div>
 
     <aside class="playlist">
+      <h2>Playlist</h2>
       <ul id="playlist"></ul>
     </aside>
   </main>
@@ -42,14 +44,10 @@
     <script>(AdProvider = window.AdProvider || []).push({"serve": {}});</script>
   </div>
 
+  <!-- Related Videos -->
   <section class="related">
     <h2>Video Lainnya</h2>
     <div id="relatedVideos" class="related-grid"></div>
-    <div class="pagination">
-      <button id="prevPage">Prev</button>
-      <span id="pageInfo"></span>
-      <button id="nextPage">Next</button>
-    </div>
   </section>
 
   <!-- Video Slider Ads -->
@@ -76,5 +74,6 @@
 
   <!-- Playlist & Video Switcher -->
   <script src="script.js"></script>
+
 </body>
 </html>
